@@ -16,20 +16,22 @@ const Layout = () => {
     }
   return (
       <>
-          <div className=' shadow-lg h-[80px]'>
-      <div className='flex justify-between items-center py-3 mx-8 sm:mx-20 xl:mx-32'>
+          <div className=' shadow-lg h-[55px] sticky top-0 z-50'>
+      <div className='flex justify-between items-center py-2 h-full px-3 sm:px-6 md:px-10 xl:px-32'>
           
           <div className='flex justify-center items-center gap-2'>
-              <img src="/blog_logo.png" alt="logo" className='w-10 sm:w-15' /> 
-              <h2 onClick={()=>navigate('/')} className='text-3xl font-semibold cursor-pointer text-primary'>BlogiVerse</h2>
+              <img src="/blog_logo.png" alt="logo" className='w-8 sm:w-8 md:w-10' /> 
+              <h2 onClick={()=>navigate('/')} className='text-2xl font-semibold cursor-pointer text-primary'>BlogiVerse</h2>
           </div>
           
-          <button onClick={logout} className='text-white bg-primary hover:bg-blue-800 hover:text-gray-400 hover:scale-95 rounded-3xl px-5 py-3 cursor-pointer flex justify-center items-center gap-2 transition-colors duration-300 ease-in-out hover:border '>Logout  <ArrowRight size={24} /> </button>
+          <button onClick={logout} className='flex items-center gap-2 text-xs sm:text-sm md:text-base text-white bg-primary hover:bg-blue-800 hover:text-gray-400 hover:scale-95 rounded-3xl px-2 sm:px-3 py-1.5 transition duration-300'
+
+>Logout  <ArrowRight size={15} /> </button>
             </div>
       </div>
           
 
-          <div className='flex h-[calc(100vh-80px)] '>
+          <div className='flex h-[calc(100vh-55px)] '>
               <Sidebar/>
               <Outlet/>
           </div>
